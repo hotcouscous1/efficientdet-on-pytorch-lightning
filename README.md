@@ -1,4 +1,4 @@
-# Object-Detection Pipeline in PyTorch Lightning
+# Pipeline for Object Detection in PyTorch Lightning
 
 <p align="center">
   <img src="https://github.com/hotcouscous1/Logo/blob/main/TensorBricks_Logo.png" width="500" height="120">
