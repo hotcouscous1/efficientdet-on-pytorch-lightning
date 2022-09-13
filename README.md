@@ -85,25 +85,19 @@ model:
   loss:
     fore_th: 0.5
     back_th: 0.4
-    alpha: 0.25
-    gamma: 1.5
-    beta: 0.1
-    fore_mean: True
-    reg_weight:
-    average: True
   nms:
     iou_th: 0.5
     max_det: 400
   optimizer:
-    lr: 0.001
+    lr: 0.0001
 
 log:
-  name: exp1
-  project: COCO_EfficientDet_D0
+  name: exp0-run0
+  project: COCO_EfficientDet
   save_dir: ./log
-  artifact_type: lr
-  artifact_name: experiment_1
-  artifact_description: lr=0.001 | scheduler=ReduceLROnPlateau | monitor=AP
+  artifact_type: find_lr
+  artifact_name: experiment_0
+  artifact_description: lr=0.0001 | scheduler=ReduceLROnPlateau | monitor=AP
   artifact_save_files:
     trainer: config/trainer/default.yaml
 ```
@@ -113,13 +107,13 @@ If you want to continue the previous training, give the checkpoint file from Art
 ### 3. Train
 Once you've configured the trainer and experiment, type the command line like below. The experiment file must be located under *config* directory and its name must be typed without *.yaml*.
 ```
-python train.py --config-name experiment_1
+python train.py --config-name experiment_0
 ```
 
 ### 4. Test
 Enter the checkpoint file of the model's weight that you want to test to *ckpt_path*. Then the result converted to COCO-style will be saved as a json file.
 ```
-python test.py --config-name experiment_1
+python test.py --config-name experiment_0
 ```
 
 ## License
