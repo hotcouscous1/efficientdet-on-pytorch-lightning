@@ -1,0 +1,20 @@
+Trainer:
+  max_epochs: 100
+  accelerator: gpu
+  accumulate_grad_batches: 8
+  log_every_n_steps: 100
+
+
+Callbacks:
+  EarlyStopping:
+    monitor: AP
+    patience: 10
+    check_on_train_epoch_end: False
+
+  LearningRateMonitor:
+    logging_interval: step
+
+
+Profiler:
+  PyTorchProfiler:
+
