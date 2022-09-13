@@ -44,17 +44,17 @@ Training is running now! 🔥🔥🔥
 ### 1. Configure Trainer
 Configure pl.Trainer with a single yaml file. The file will pass to it its arguments and every modules in Callbacks, Profiler, Logger, Strategy, and Plugins of PyTorch Lightning through a Config_Trainer object.  
 
-```
+```  
 Trainer:
   max_epochs: 100
   accelerator: gpu
   accumulate_grad_batches: 8
-  log_every_n_steps: 50
+  log_every_n_steps: 100
 
 Callbacks:
   EarlyStopping:
     monitor: AP
-    patience: 5
+    patience: 10
     check_on_train_epoch_end: False
 
   LearningRateMonitor:
