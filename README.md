@@ -33,9 +33,11 @@ We run training on **GeForce RTX 2070 SUPER**.
 |D7|-|53.7|51.8M|-|-|
 |D7X|-|55.1|77.1M|-|-|
 
+Training is running now! 🔥🔥🔥
+
 
 ## Updates
-- **[22.09.12]** initial commit
+- **[22.09.12]** Initial commit
 
 
 ## Training
